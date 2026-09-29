@@ -118,7 +118,7 @@ export default function Hero() {
             <div className="relative h-[500px] overflow-hidden bg-off-white sm:h-[600px] lg:h-full">
 
               <Image
-                src="/assets/images/hero-lawyer.jpg"
+                src="/images/hero-lawyer.png"
                 alt="Zanan Legal Practitioners"
                 fill
                 priority

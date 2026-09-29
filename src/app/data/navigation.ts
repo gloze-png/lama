@@ -14,18 +14,14 @@ export const navigation = [
     label: "Practice Areas",
     href: "/practice-areas",
   },
+ 
   {
     id: 4,
-    label: "Our Team",
-    href: "/team",
-  },
-  {
-    id: 5,
     label: "Insights",
     href: "/insights",
   },
   {
-    id: 6,
+    id: 5,
     label: "Contact",
     href: "/contact",
   },
