@@ -1,0 +1,106 @@
+import Link from "next/link";
+import { Icon } from "@iconify/react";
+
+import Reveal from "@/app/components/common/Reavel";
+
+export default function AboutHero() {
+  return (
+    <section className="relative overflow-hidden bg-black pb-16 pt-37.5 text-white sm:pb-20 sm:pt-42.5 lg:pb-24 lg:pt-47.5">
+
+      {/* Background decoration */}
+      <div
+        className="pointer-events-none absolute -right-40 top-15 h-125 w-125 rounded-full border border-white/6"
+        aria-hidden="true"
+      />
+
+      <div
+        className="pointer-events-none absolute right-10 top-45 h-62.5 w-62.5 rounded-full border border-brown/20"
+        aria-hidden="true"
+      />
+
+      <div className="zanan-container relative z-10">
+
+        {/* Breadcrumb */}
+        <Reveal direction="right">
+          <div className="flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.18em]">
+            <Link
+              href="/"
+              className="text-white/40 transition-colors duration-300 hover:text-light-brown"
+            >
+              Home
+            </Link>
+
+            <Icon
+              icon="solar:arrow-right-linear"
+              width="14"
+              height="14"
+              className="text-white/25"
+            />
+
+            <span className="text-light-brown">
+              About Us
+            </span>
+          </div>
+        </Reveal>
+
+        {/* Main heading */}
+        <div className="grid gap-10 pb-16 pt-14 lg:grid-cols-[0.65fr_1.35fr] lg:gap-20 lg:pb-24 lg:pt-20">
+
+          <Reveal direction="right" delay={100}>
+            <div>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-light-brown">
+                About Zanan
+              </span>
+            </div>
+          </Reveal>
+
+          <div>
+            <Reveal delay={150}>
+              <h1 className="max-w-225 text-[48px] font-medium leading-[1.04] tracking-[-0.045em] text-white sm:text-[64px] lg:text-[78px] xl:text-[88px]">
+                Law practiced with
+                <span className="text-light-brown"> purpose.</span>
+              </h1>
+            </Reveal>
+
+            <Reveal delay={260}>
+              <p className="mt-8 max-w-162.5 text-[15px] leading-7 text-white/55 sm:text-base">
+                We combine legal knowledge, strategic thinking and a clear
+                understanding of our clients&apos; objectives to provide
+                practical legal solutions.
+              </p>
+            </Reveal>
+          </div>
+
+        </div>
+
+        {/* Bottom */}
+        <Reveal delay={300}>
+          <div className="flex flex-col gap-5 border-t border-white/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
+
+            <p className="text-[10px] uppercase tracking-[0.16em] text-white/35">
+              Zanan Legal Practitioners
+            </p>
+
+            <div className="flex items-center gap-3">
+              <span className="h-px w-8 bg-brown" />
+
+              <span className="text-[10px] uppercase tracking-[0.16em] text-white/45">
+                Strategic. Practical. Dependable.
+              </span>
+            </div>
+
+          </div>
+        </Reveal>
+
+      </div>
+
+      {/* Giant background word */}
+      <div
+        className="pointer-events-none absolute -bottom-12.5 left-0 hidden select-none text-[200px] font-semibold leading-none tracking-[-0.08em] text-white/[0.018] xl:block"
+        aria-hidden="true"
+      >
+        ABOUT
+      </div>
+    </section>
+  );
+}
